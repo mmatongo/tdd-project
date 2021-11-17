@@ -13,7 +13,7 @@ describe 'Solver' do
       end
 
       it 'negative numbers' do
-        expect { @solver.factorial(-1) }.to raise_error(ArgumentError)
+        expect { @solver.factorial(-1) }.to raise_exception
       end
 
       it 'returns the factorial of N' do
