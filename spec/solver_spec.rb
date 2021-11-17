@@ -13,7 +13,8 @@ describe 'Solver' do
       end
 
       it 'negative numbers' do
-        expect { @solver.factorial(-1) }.to raise_exception
+        expect { @solver.factorial(-1) }.to raise_exception an_instance_of(StandardError)
+          .and(having_attributes({ 'message' => 'Number should be greater than zero' }))
       end
 
       it 'returns the factorial of N' do
