@@ -23,12 +23,16 @@ describe 'Solver' do
     end
   end
 
-  describe "#reverse word" do
-    context "when given a word" do
-      it "returns the word reversed" do
-        result = @solver.reverseworld("hello")
-        expect(result).to eql?("olleh")
-    end
+  describe '#reverse word' do
+    context 'when given a word' do
+      it 'returns hello reversed' do
+        result = @solver.reverse_word('hello')
+        expect(result).to eql('olleh')
+      end
+      it 'returns tito reversed' do
+        result = @solver.reverse_word('tito')
+        expect(result).to eql('otit')
+      end
     end
   end
 end
