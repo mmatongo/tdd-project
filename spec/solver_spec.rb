@@ -35,4 +35,25 @@ describe 'Solver' do
       end
     end
   end
+
+  describe '#fizzbuzz' do
+    context 'when given a number' do
+      it 'When N is divisible by 3, return "fizz"' do
+        result = @solver.fizzbuzz(3)
+        expect(result).to eq 'fizz'
+      end
+      it 'When N is divisible by 5, return "buzz"' do
+        result = @solver.fizzbuzz(5)
+        expect(result).to eq 'buzz'
+      end
+      it 'When N is divisible by 3 & 5, return "fizzbuzz"' do
+        result = @solver.fizzbuzz(15)
+        expect(result).to eq 'fizzbuzz'
+      end
+      it 'When N is not divisible by 3 or 5, return "N"' do
+        result = @solver.fizzbuzz(7)
+        expect(result).to eq '7'
+      end
+    end
+  end
 end

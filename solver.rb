@@ -11,7 +11,7 @@ class Solver
     result
   end
 
-  def reverse_word word
+  def reverse_word(word)
     word.reverse
   end
 end
